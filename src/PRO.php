@@ -169,6 +169,15 @@ interface PRO {
   public function match(string $subject, int $flags = 0) : array;
 
   /**
+   * checks whether the pattern matches the subject string.
+   *
+   * @param string $subject  the string to search
+   * @param int    $flags    PRO::MATCH_* flags
+   * @return bool            true if string matches; false otherwise
+   */
+  public function matches(string $subject, int $flags = 0) : bool;
+
+  /**
    * finds and replaces pattern matches in the subject string.
    *
    * @param string          $subject  the string to search
